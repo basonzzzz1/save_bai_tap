@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="a" id="number1">
+<input type="number" placeholder="b" id="number2">
+<input type="button" value="kiem tra" onclick="ptbn()">
+<div id="ketQua"></div>
+<script>
+    function ptbn() {
+        var numberA = document.getElementById("number1").value;
+        var numberB = document.getElementById("number2").value;
+        var numberX;
+        if(numberA==0){
+            if(numberB==0){
+                numberX="phuong trinh vo so nghiem"
+            }else{
+                numberX="phuong trinh vo nghiem"
+            }
+        }else {
+            numberX = -numberB/numberA;
+        }
+        document.getElementById("ketQua").innerHTML="ket qua la:"+numberX;
+    }
+</script>
+</body>
+</html>
