@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="nhap vao so meter " id="meter1">
+<input type="button" value="chuyen doi" onclick="chuyenDoi()">
+<div id="myfeet"></div>
+<script>
+  function chuyenDoi(){
+    var met = document.getElementById("meter1").value;
+    var feet = met*3.2808;
+    document.getElementById("myfeet").innerHTML=met+"met"+" = "+feet+"feet";
+  }
+</script>
+</body>
+</html>
