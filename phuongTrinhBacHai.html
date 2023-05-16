@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="A" id="numberA">
+<input type="number" placeholder="B" id="numberB">
+<input type="number" placeholder="C" id="numberC">
+<input type="button" value="kiem tra " onclick="ptbh()">
+<div id="delta"></div>
+<div id="ketQua"></div>
+<script>
+  function ptbh(){
+    var numberA = document.getElementById("numberA").value;
+    var numberB = document.getElementById("numberB").value;
+    var numberC = document.getElementById("numberC").value;
+    var x1;
+    var x2;
+    var string;
+    var delta = Math.pow(numberB,2)-4*numberA*numberC;
+    document.getElementById("delta").innerHTML="delta ="+delta;
+    if(delta<0){
+      string ="phuong trinh vo nghiem!"
+    }else if (delta>0){
+      x1 = "x1 ="+(-numberB-Math.sqrt(delta))/(2*numberA);
+      x2 = "x2 ="+(-numberB+Math.sqrt(delta))/(2*numberA);
+      string=(x1)+x2;
+    }else{
+      string ="phuong trinh co nghiem x1 bang voi x2 ="+ (-numberB/(2*numberA));
+    }
+    document.getElementById("ketQua").innerHTML=string;
+  }
+</script>
+
+</body>
+</html>
